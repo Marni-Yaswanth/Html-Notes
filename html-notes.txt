@@ -1,0 +1,574 @@
+---------------------------HTML---------------------------------
+live server - it wont work without head and body
+
+----------vid-6-----------------
+
+<!DOCTYPE html> this line tells chrome that we r using html 
+<html lang="en"> language is english 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+if we wanted to style inside html using css we should add code in head part
+
+------------------vid-7-------------------
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage by Yaswanth Marni</title>
+    <meta name="description" content="hello guys u r watching a webpage designed by marni yaswanth"> 
+
+//////////////this line adds description to u r page
+
+---------------------video -9---------------
+if we wanted two boxes one is yellow and one is pink with two different div with different width and height 
+lets see ........
+
+    <style>
+        div {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div>
+        <p>first box</p>
+    </div>
+    <div>
+        <p>second box</p>
+    </div>
+
+
+here comes the issue beacause with the same div there r two divs so styling can be done same for those two
+
+
+--------------video -10---------------------------
+to avoid that problem we need something to pick things unique
+its the CLASS
+
+  <style>
+        .box1 {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+        }
+        .box2 {
+            background-color: pink;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="box1"> ////////this class here helps to identify it uniquely
+        <p>first box</p>
+    </div>
+    <div class="box2">
+        <p>second box</p>
+    </div>
+
+    ---------------vid-11---------------------------------
+    how to add div inside a div ............nested div
+
+
+       <style>
+        .box1 {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+        }
+        .box2 {
+            background-color: pink;
+            width: 100px;
+            height: 100px;
+        }
+        .box3 {
+            background-color: grey;
+            width: 50px;
+            height: 75px;
+        }
+        .box4 {
+            background-color: black;
+            width: 50px;
+            height: 75px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    
+    <div class="box1">
+        <div class="box3">this is box3</div>  ///////think like this creates a box inside a box
+    </div>
+    <div class="box2">
+        <div class="box4">this is box3</div>
+    </div>
+</body>
+</html>
+
+
+------------------video-13------------------
+wht if we r having 20 boxes, then how can we code styling in the html file which we r working on........dont u think its difficult....so lets know how to link css file externally
+
+make other file named style.css
+and cut all the styling code which is there in the html file and paste it in the style.css 
+and in html file in head add this  
+<link rel="stylesheet" href="style.css"> /////////this line links external css file to our html file
+
+-----------------------------------------project 0 is done ------------------------------------------------------------
+---------------------------its time for new project now-----------------------------------------------------------------
+
+
+----------------------video-14-----------
+created an index.html and style.css files for the new project
+
+-----------------------------video-15-----------------
+installed live server and SFTP
+
+--------------------------video -16-------------------------
+install other extensions SFTP and htmlhint
+
+
+-----------------video -17 ---------------------------
+difference between div and nav tags
+div - divides into blocks like a box
+nav - creates navigation links
+header
+footer 
+main
+
+---------------------------video 18,19-------------------------
+
+create a web page with header,footer,nav,main
+style it using css
+
+//////////html code
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    
+    <div class="container">
+        <header>
+
+        </header>
+        <nav>
+
+        </nav>
+        <main>
+
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>
+
+///////////css code
+.container{
+    width: 1024px;
+    margin-left:auto ;
+    margin-right:auto ;
+}
+header{
+    background-color: blue;
+    height: 108px;
+}
+nav{
+    background-color: red;
+    height: 40px;
+}
+main{
+    background-color: orange;
+    height: 400px;
+}
+footer{
+    background-color: green;
+    height: 100px;
+}
+body{
+    background-color: black;
+}
+
+----------------------vid-20-------------------------
+adding img 
+create a folder named images in the same folder
+use this to add images
+<img ref="path" alt="this is an alternative for the image">
+
+--------------vid-21-------------------------
+how to center an image using css
+
+text-align:center
+
+-------------------------vid-22----------------
+how to change font size in html and in css
+p{
+    write some code here to make changes to the required things
+}
+
+-----------------vid-23-----------------------------
+how to add links 
+<a href="link" target="_blank"> write somnething here </a>
+in css
+a{
+
+}
+---------------------video-24----------------
+how to add background images
+
+in css  
+    background-image: url(images/background-adare-restaurant.jpg);
+    background-color: black;
+    background-size: cover;  ///this lines tells to cover the entire screen ///or it just covers the div
+    background-position:center; 
+    background-repeat: no-repeat; //this line tells not to repeat the image multiple times.
+
+----------------------------video-25-----------------------------
+how to make navigation transparent
+in css go to nav
+
+background-color: rgba(0, 0, 0, 0.036);  // the last value which is alpha m,akes the nav transparent
+
+----------------------video-26----------------------------
+how to add navigation in html 
+create links using some shortcuts like
+a*6
+ctrl + alt + down arrow
+
+and 
+<nav>
+            <a href="#">HOME</a>
+            <a href="#">MENU</a>
+            <a href="#">ORDER ONLINE </a>
+            <a href="#">GIFT VOUCHER</a>
+            <a href="#">CATERING</a>
+            <a href="#">CONTACT</a>
+        </nav>
+
+
+--------------------------video-27---------------
+how to deal with multiple classes
+just in css 
+write classes by providing names with spaces in between them
+
+nav a{
+    text-decoration: none;
+    font-size: 20px;
+}
+//////////this code example tells that whatever the links which are in nav should be given the properties written in css file 
+
+
+-------------------video-28----------------
+footer done
+in html
+<footer>
+            <p>Alamuru road,Mandapeta,East Godavari District,Andhra Pradesh</p>
+</footer>
+
+in css
+
+footer p 
+{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-size: 25px;
+    color: bisque;
+} 
+
+
+-------------------------video-30---------------------
+how to add email 
+<a href="mailto:yaswanthmarni7077@gmail.com">click here to mail yaswanth</a>
+//////////////this line .......when u click on it...it directly opens mail page to mail yaswanth.
+
+if we wanted to add subject in that also 
+<a href="mailto:yaswanthmarni7077@gmail.com?subject:Reservation">
+
+
+-------------------------vid-31-------------------------
+how to google maps
+go to google maps and search for an area
+click on share
+embed code
+put that in seperate section
+<section>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.4071017911656!2d81.92020887412863!3d16.855744417905054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3797e842179537%3A0xe34d98b366a0fe74!2sAkshaya%20Restaurant!5e0!3m2!1sen!2sin!4v1683290163588!5m2!1sen!2sin" width="1024" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+
+----------------vid-34---------------
+
+///creating a second project files
+
+------------------------vid-35---------------------
+how to reset css using eric meyer 
+
+--------------------vid-36-------------------------
+
+height is min-height difference in css
+height means it is fixed for that
+min height-is like the height minimum is the value which we give but it can increase according to the size if requires.
+main
+{
+    background-color: pink;
+    min-height: 400px; 
+}
+////in this main minimum height is 400px but if the word or anything is increased then the main size will increase
+
+--------------------------vid-37------------------------
+what is flex box
+if we have boxes side by side 
+we know that we have to create a parent div named boxes
+and child divs inside it and name them as box1 box2 box3
+
+
+.boxes
+{
+    background-color: bisque;
+    min-height: 300px;
+    display: flex; 
+}
+/////this display:flex makes the three boxes come in side in side.
+we have to mention height and width accordingly
+
+
+------------------------------vid-38-------------------
+to give spaces between those boxes
+we can use margin for individual boxes
+or else
+we can use justify-content: space-between
+///it gives equal spaces between the boxes
+/// space-around gives space on both sides of the box
+
+
+
+--------------------------vid-39----------------------
+how to use two div side by side and give manual sizing for them using flex
+in the parent tag of that div define display:flex
+and in the child tags 
+flex:2;
+flex:1;
+
+  <main>
+            <div class="para1"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos facilis nam sed, ullam obcaecati corporis aliquid dolorem, laboriosam delectus doloremque ipsum tenetur aperiam! Cupiditate voluptas quidem nostrum vitae necessitatibus repudiandae delectus nulla, magnam sint veniam doloremque libero eaque. Facilis, voluptatibus. Maxime officia fugit distinctio modi inventore, qui exercitationem omnis magnam possimus sunt doloribus, quo esse quam animi. Vel deserunt voluptate consectetur modi necessitatibus corporis eligendi esse blanditiis, commodi dignissimos quas cum corrupti odio. Incidunt deleniti perspiciatis repellat sequi hic nisi aperiam, voluptates cumque beatae suscipit sint minus ducimus officia ex nesciunt dicta quibusdam, maxime deserunt laboriosam quisquam similique animi est.</p>
+            </div>
+            <div class="para2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, delectus.</p>
+            </div>
+            
+        </main>
+
+        in css
+main
+{
+    background-color: pink;
+    min-height: 400px; 
+    display:flex;
+}
+
+.para1{
+    flex: 2;
+
+}
+.para2
+{
+    flex:1;
+}
+
+
+----------------------vid-40-----------------------------
+how to vertically align items in center using flex
+
+in parent tag write 
+in css
+
+align-items:center
+
+main
+{
+    background-color: pink;
+    min-height: 400px; 
+    display:flex;
+    align-items: center;  ///this tells the items should vertically aligned center
+
+    
+}
+
+---------------------------------------vid-43----------------------------------------
+if we want gradient in background color then use 
+background-img:linear-gradient(color1,color2...);
+
+
+----------------------------------vid-47-----------------------------
+ if we wanted space between lines and lines 
+ use 
+ line-height:10px;
+
+
+ -----------------------vid-50-----------------------
+ block level images vs back ground images
+ images which are in backkground images are known as block level images
+ .card1
+{
+    background-image: url(images/image-background-card1.jpg);
+    width:30%;   
+    align-items: center; 
+    height: 200px;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-position: center;
+    margin-left: 20px;
+   
+}
+
+<div class="card1">
+                <a href="#">
+                <i class="fa fa-automobile"></i>
+                <h2>Book Online</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, commodi.</p>
+            </a>
+            </div>
+
+
+----------------------------------vid-52-----------------
+adding icons
+go to a website where u can find icons
+
+in head link that and in div blocks attach that
+ <div class="card2">
+                <a href="#">
+                <i class="fa fa-cogs"></i>  //////////this line is getting that icon
+                <h2>Service Types</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, aliquam?
+                </p>
+            </a>
+                </div>
+
+    <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+/////////this is what we r linking to this page
+
+--------------------vid-53-------------------
+how to make an entire div as link
+<div class="card1">
+                <a href="#"> /////making an entire div as a link
+                <i class="fa fa-automobile"></i>
+                <h2>Book Online</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, commodi.</p>
+            </a>
+            </div>
+
+
+
+-----------------------------vid-54---------------------------
+The CSS box-sizing property allows us to include the padding and border in an element's total width and height.
+width + padding + border = actual width of an element
+height + padding + border = actual height of an element
+
+.card1, .card2, .card3{
+    padding: 15px 30px 20px 30px;
+    box-sizing: border-box;
+    
+}
+
+
+
+-----------------------------vid-55-------------------------
+how to make coloured button
+
+just put a link using 'a' tag and in css make background different
+
+---------------------vid-56--------------------------
+
+adding margin 
+
+using border,border-top,border-bottom....
+
+a.myButton{
+    border-color: black;
+    border-top: 10px;
+}
+
+------------------vid-57-----------------------------
+adding radius to the button
+
+using border-radius:value
+
+.myButton{
+    
+    justify-content: center;
+    border-radius: 12%;
+}
+
+-----------------vid-58----------------------------------
+shadow to a box
+ box-shadow: 0px 2px 2px black;////this line adds shadow to the box
+ text-shadow : 2px 2px black;///this line adds shadow to the text
+
+ --------------------------------------vid-60,61,62---------------
+
+.myButton:hover{    /////this is used to change the color of the box when we put mouse on it
+    background-color: #D9AFD9;
+    transition-duration: 2s;
+}
+a.myButton{
+    border-color: green;
+    color: black;
+}
+
+
+
+--------------------------vid-63-----------------------
+how to add a horizontal line using css
+use 
+border-bottom : 2px;
+
+header{
+    background-color:rgb(155, 177, 152);
+    height: 150px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    justify-content: space-between;
+    border-bottom: 2px solid black;  ///this line tells to have a line below header section 
+} 
+
+
+
+---------------------------vid-66-------------------------------
+
+div :first-child
+div: :last-child
+div :nth-child(3)
+div p:last-of-type
+
+
+-----------------------------------vid-67
+
+display:in-line-block;
+
